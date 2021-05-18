@@ -28,16 +28,16 @@ def bullsncows(player, comp):  # hledani bulls a cows
     print("Bulls: ", bulls, ", Cows: ", cows)
 
 
-oddelovac = ("-" * 30)
+ODDELOVAC = ("-" * 30)
 
 riddle = str(random.randint(1000, 10000))       # generovani 4 mistneho cisla
 while not find_duplicates(riddle):              # v pripade, ze cislo obsahuje duplicity, vygeneruje nove cislo
     riddle = str(random.randint(1000, 10000))
 
 print("Hi there!")
-print(oddelovac)
+print(ODDELOVAC)
 print("I've generated a random 4 digit number for you. \nLet's play a bulls and cows game.")
-print(oddelovac)
+print(ODDELOVAC)
 
 game = True  # hra bezi
 counter = 1  # pocitadlo
@@ -53,5 +53,5 @@ while game:
 
     elif guess != riddle:  # neuhodnuti hadanky
         bullsncows(guess, riddle)  # hledani bulls and cows
-        print(oddelovac)
+        print(ODDELOVAC)
         counter += 1  # pocitadlo pokusu
